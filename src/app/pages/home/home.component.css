@@ -1,0 +1,63 @@
+.content{
+    background-image: url(../../../assets/img/Main.jpg);
+    height: 500px;
+    background-position: center;
+    background-size:cover;
+}
+.content h1{
+    color:#FFF;
+    font-weight: bold;
+    top:30%;
+    left: 50px;
+    position: relative;
+}
+
+.container h1{
+    text-decoration: underline;
+    text-decoration-color:red;
+}
+.stepBox{
+    margin-top: 10px;
+    text-align: center;
+    background-color: rgb(207, 205, 205);
+    padding: 20px 10px;
+    border-radius: 5px;
+}
+.stepBox h1{
+    color:var(--primary-color);
+}
+.rate {
+ 
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#FFF;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
